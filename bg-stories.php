@@ -24,6 +24,7 @@ if( !function_exists( 'add_action' ) ) {
 * Includes for plugin
 *****************************/
 include( 'includes/activate.php' );
+include( 'includes/init.php' );
 
 /***************************** 
 * Hooks for plugin
@@ -31,6 +32,7 @@ include( 'includes/activate.php' );
 register_activation_hook( __FILE__ , 'bgs_plugin_activated' ); 
 // register_activation_hook( $file, $function ); 
 // Fn will be called when plugin is activated
+add_action( 'init', 'bgs_stories_init' );
 
 /***************************** 
 * Shortcodes for plugin

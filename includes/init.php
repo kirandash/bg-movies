@@ -1,44 +1,44 @@
 <?php
 /**
- * Register a stories post type.
+ * Register a Movies post type.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
-function bgs_stories_init() {
+function bgs_Movies_init() {
 	$labels = array(
-		'name'               => _x( 'Stories', 'post type general name', 'bg-stories' ),
-		'singular_name'      => _x( 'Story', 'post type singular name', 'bg-stories' ),
-		'menu_name'          => _x( 'Stories', 'admin menu', 'bg-stories' ),
-		'name_admin_bar'     => _x( 'Story', 'add new on admin bar', 'bg-stories' ),
-		'add_new'            => _x( 'Add New', 'Story', 'bg-stories' ),
-		'add_new_item'       => __( 'Add New Story', 'bg-stories' ),
-		'new_item'           => __( 'New Story', 'bg-stories' ),
-		'edit_item'          => __( 'Edit Story', 'bg-stories' ),
-		'view_item'          => __( 'View Story', 'bg-stories' ),
-		'all_items'          => __( 'All Stories', 'bg-stories' ),
-		'search_items'       => __( 'Search Stories', 'bg-stories' ),
-		'parent_item_colon'  => __( 'Parent Stories:', 'bg-stories' ),
-		'not_found'          => __( 'No Stories found.', 'bg-stories' ),
-		'not_found_in_trash' => __( 'No Stories found in Trash.', 'bg-stories' )
+		'name'               => _x( 'Movies', 'post type general name', 'bg-Movies' ),
+		'singular_name'      => _x( 'Movie', 'post type singular name', 'bg-Movies' ),
+		'menu_name'          => _x( 'Movies', 'admin menu', 'bg-Movies' ),
+		'name_admin_bar'     => _x( 'Movie', 'add new on admin bar', 'bg-Movies' ),
+		'add_new'            => _x( 'Add New', 'Movie', 'bg-Movies' ),
+		'add_new_item'       => __( 'Add New Movie', 'bg-Movies' ),
+		'new_item'           => __( 'New Movie', 'bg-Movies' ),
+		'edit_item'          => __( 'Edit Movie', 'bg-Movies' ),
+		'view_item'          => __( 'View Movie', 'bg-Movies' ),
+		'all_items'          => __( 'All Movies', 'bg-Movies' ),
+		'search_items'       => __( 'Search Movies', 'bg-Movies' ),
+		'parent_item_colon'  => __( 'Parent Movies:', 'bg-Movies' ),
+		'not_found'          => __( 'No Movies found.', 'bg-Movies' ),
+		'not_found_in_trash' => __( 'No Movies found in Trash.', 'bg-Movies' )
 	);
 
 	$args = array(
 		'labels'             => $labels,
-        'description'        => __( 'Description.', 'bg-stories' ),
+        'description'        => __( 'Description.', 'bg-Movies' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'story' ),
+		'rewrite'            => array( 'slug' => 'movie' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-		'menu_icon'			 => 'dashicons-smiley'
+		'menu_icon'			 => 'dashicons-video-alt2'
 	);
 
-	register_post_type( 'story', $args );
+	register_post_type( 'movie', $args );
 }
 ?>

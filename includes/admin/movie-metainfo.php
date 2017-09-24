@@ -1,5 +1,5 @@
 <?php
-function bgs_movies_info_mb() {
+function bgs_movies_info_mb( $post ) {
 	$movie_data = get_post_meta( $post->ID, 'movie_data', true ); // returns array values
 	// var_dump($movie_data);
 	if(!$movie_data){
@@ -36,7 +36,7 @@ function bgs_movies_info_mb() {
 		<input type="text" class="form-control" name="bgs_inputKeywords" value="<?php echo $movie_data['keywords']; ?>">
 	</div>
 	<div class="form-group">
-		<label for="Genres">Genres</label>
+		<label for="Genre">Genre</label>
 		<select name="bgs_inputGenres" class="form-control" id="bgs_inputGenres">
 			<option value="Action">Action</option>
 			<option value="Biography" <?php echo $movie_data['genres'] == "Biography" ? "SELECTED" : ""; ?>>Biography</option>
@@ -55,9 +55,9 @@ function bgs_movies_info_mb() {
 		<label for="Certificate">Certificate</label>
 		<select name="bgs_inputCertificate" class="form-control" id="bgs_inputCertificate">
 			<option value="U">U</option>
-			<option value="U/A" <?php echo $movie_data['audience'] == "U/A" ? "SELECTED" : ""; ?>>U/A</option>
-			<option value="A" <?php echo $movie_data['audience'] == "A" ? "SELECTED" : ""; ?>>A</option>
-			<option value="S" <?php echo $movie_data['audience'] == "S" ? "SELECTED" : ""; ?>>S</option>
+			<option value="U/A" <?php echo $movie_data['certificate'] == "U/A" ? "SELECTED" : ""; ?>>U/A</option>
+			<option value="A" <?php echo $movie_data['certificate'] == "A" ? "SELECTED" : ""; ?>>A</option>
+			<option value="S" <?php echo $movie_data['certificate'] == "S" ? "SELECTED" : ""; ?>>S</option>
 		</select>
 	</div>
 	<?php

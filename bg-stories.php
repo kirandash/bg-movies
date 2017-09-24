@@ -15,6 +15,10 @@ Domain Path:  /languages
 /*****************************
 * Setting up plugin
 *****************************/
+if( !function_exists( 'add_action' ) ) {
+	echo 'You do not have access to this page.';
+	exit();	
+}
 
 /***************************** 
 * Includes for plugin

@@ -17,7 +17,17 @@ function bgs_filter_movie_post_content( $content ) {
 	$movie_html = str_replace("GENRE_PLACEHOLDER", $movie_data['genres'], $movie_html);
 	$movie_html = str_replace("AUDIENCE_PLACEHOLDER", $movie_data['audience'], $movie_html);
 	$movie_html = str_replace("CERTIFICATE_PLACEHOLDER", $movie_data['certificate'], $movie_html);
-	
+
+	// Internationalize strings
+	$movie_html = str_replace("DIRECTOR_I18N", __("Director", "bg-movies"), $movie_html);
+	$movie_html = str_replace("WRITER_I18N", __("Writer", "bg-movies"), $movie_html);
+	$movie_html = str_replace("STARS_I18N", __("Stars", "bg-movies"), $movie_html);
+	$movie_html = str_replace("TAGLINE_I18N", __("Tagline", "bg-movies"), $movie_html);
+	$movie_html = str_replace("KEYWORDS_I18N", __("Key words", "bg-movies"), $movie_html);
+	$movie_html = str_replace("GENRE_I18N", __("Genre", "bg-movies"), $movie_html);
+	$movie_html = str_replace("AUDIENCE_I18N", __("Audience", "bg-movies"), $movie_html);
+	$movie_html = str_replace("CERTIFICATE_I18N", __("Certificate", "bg-movies"), $movie_html);
+
 	return $movie_html . $content;
 }
 ?>

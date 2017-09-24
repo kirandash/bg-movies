@@ -17,3 +17,5 @@ save_post_ and update_post_meta
 ## Step 7 : Filter data with filter hook and placeholders
 add_filter ( 'the_content' )
 
+## Step 8 : Internationalizing all strings
+

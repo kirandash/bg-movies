@@ -13,3 +13,7 @@ wp_enqueue_style and plugins_url
 
 ## Step 6 : Save metadata
 save_post_ and update_post_meta
+
+## Step 7 : Filter data with filter hook and placeholders
+add_filter ( 'the_content' )
+

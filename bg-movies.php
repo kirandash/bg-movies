@@ -28,6 +28,7 @@ include( 'includes/activate.php' );
 include( 'includes/init.php' );
 include( 'includes/admin/init.php' );
 include( 'save/save-post-movie.php' );
+include( 'save/filter-postcontent.php' );
 
 /***************************** 
 * Hooks for plugin
@@ -38,6 +39,7 @@ register_activation_hook( __FILE__ , 'bgs_plugin_activated' );
 add_action( 'init', 'bgs_movies_init' );
 add_action( 'admin_init', 'bgs_movies_admin_init' );
 add_action( 'save_post_movie', 'bgs_save_movie_post_admin', 10, 3 );
+add_filter( 'the_content', 'bgs_filter_movie_post_content' );
 /***************************** 
 * Shortcodes for plugin
 *****************************/

@@ -9,7 +9,7 @@ if( !function_exists( 'add_action' ) )
 ## Step 4 : Create meta boxes with add_meta_box
 
 ## Step 5 : Enqueue stylesheet to load in admin only for movie CPT
-wp_enqueue_style and plugins_url
+admin_enqueue_scripts, wp_enqueue_style and plugins_url
 
 ## Step 6 : Save metadata
 save_post_ and update_post_meta
@@ -20,3 +20,6 @@ add_filter ( 'the_content' )
 ## Step 8 : Internationalizing all strings
 
 ## Step 9 : Include rating option on front end
+wp_enqueue_scripts, wp_enqueue_script
+
+## Step 10 : Ajax request for rating from front end using wp_localize_script

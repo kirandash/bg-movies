@@ -7,4 +7,14 @@
 	<li><strong>GENRE_I18N: </strong> GENRE_PLACEHOLDER</li>
 	<li><strong>AUDIENCE_I18N: </strong> AUDIENCE_PLACEHOLDER</li>
 	<li><strong>CERTIFICATE_I18N: </strong> CERTIFICATE_PLACEHOLDER</li>
+	<li>
+		<strong>RATE_I18N: </strong>
+		<select id="movie_rating" class="rate-movie" data-movieid="MOVIE_ID">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</li>
 </ul>

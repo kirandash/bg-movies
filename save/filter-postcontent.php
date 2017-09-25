@@ -27,6 +27,9 @@ function bgs_filter_movie_post_content( $content ) {
 	$movie_html = str_replace("GENRE_I18N", __("Genre", "bg-movies"), $movie_html);
 	$movie_html = str_replace("AUDIENCE_I18N", __("Audience", "bg-movies"), $movie_html);
 	$movie_html = str_replace("CERTIFICATE_I18N", __("Certificate", "bg-movies"), $movie_html);
+	$movie_html = str_replace("RATE_I18N", __("Rate", "bg-movies"), $movie_html);
+
+	$movie_html = str_replace("MOVIE_ID", $post->ID, $movie_html);
 
 	return $movie_html . $content;
 }

@@ -5,5 +5,5 @@ function bgs_admin_enqueue(){
 		return; // Enqueue the styles only for movie cpt
 	}
 	// https://codex.wordpress.org/Function_Reference/plugins_url
-	wp_enqueue_style( 'bgs_bootstrap', plugins_url( '/vendors/bootstrap/css/bootstrap.css', BGmovies_PLUGIN_URL ) );
+	wp_enqueue_style( 'bgs_bootstrap', plugins_url( '/vendors/bootstrap/css/bootstrap.css', BGMOVIES_PLUGIN_URL ) );
 }

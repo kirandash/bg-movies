@@ -19,7 +19,7 @@ if( !function_exists( 'add_action' ) ) {
 	echo 'You do not have access to this page.';
 	exit();
 }
-define( 'BGmovies_PLUGIN_URL', __FILE__ ); // define path of plugin folder instead of dirname(__FILE__)
+define( 'BGMOVIES_PLUGIN_URL', __FILE__ ); // define path of plugin folder instead of dirname(__FILE__)
 
 /***************************** 
 * Includes for plugin
@@ -29,6 +29,7 @@ include( 'includes/init.php' );
 include( 'includes/admin/init.php' );
 include( 'save/save-post-movie.php' );
 include( 'save/filter-postcontent.php' );
+include( 'includes/frontend/enqueue.php' );
 
 /***************************** 
 * Hooks for plugin
@@ -38,8 +39,9 @@ register_activation_hook( __FILE__ , 'bgs_plugin_activated' );
 // Fn will be called when plugin is activated
 add_action( 'init', 'bgs_movies_init' );
 add_action( 'admin_init', 'bgs_movies_admin_init' );
-add_action( 'save_post_movie', 'bgs_save_movie_post_admin', 10, 3 );
+add_action( 'save_post_movie', 'bgs_save_movie_post_admin', 10, 3 ); // default value is 10 which means the priority is high
 add_filter( 'the_content', 'bgs_filter_movie_post_content' );
+add_action( 'wp_enqueue_scripts', 'bgs_enqueue_frontend_scripts', 9999 ); // change the priority from default value of 10 to 9999 to make sure that first theme loads and then plugin files
 /***************************** 
 * Shortcodes for plugin
 *****************************/

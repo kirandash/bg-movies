@@ -19,3 +19,4 @@ add_filter ( 'the_content' )
 
 ## Step 8 : Internationalizing all strings
 
+## Step 9 : Include rating option on front end

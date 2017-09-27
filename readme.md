@@ -17,9 +17,11 @@ save_post_ and update_post_meta
 ## Step 7 : Filter data with filter hook and placeholders
 add_filter ( 'the_content' )
 
-## Step 8 : Internationalizing all strings
+## Step 8 : Create table with dbDelta & Internationalizing all strings 
 
 ## Step 9 : Include rating option on front end
 wp_enqueue_scripts, wp_enqueue_script
 
 ## Step 10 : Ajax request for rating from front end using wp_localize_script
+
+## Step 11 : Handle AJAX Requests and Insert Data into the Database

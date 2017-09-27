@@ -4,7 +4,7 @@
 		var formObj = {
 			action: "bgs_rate_movie",
 			movieid: $(this).data("movieid"),
-			movierating: $(this).val()
+			viewerRating: $(this).val()
 		}
 
 		// console.log(formObj);

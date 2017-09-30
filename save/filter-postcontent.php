@@ -5,7 +5,7 @@ function bgs_filter_movie_post_content( $content ) {
 	if( !is_singular('movie') ){
 		return $content;
 	}
-	global $post;
+	global $post, $wpdb;
 	$movie_data = get_post_meta( $post->ID, 'movie_data', true );
 	$movie_html = file_get_contents( 'movie-placeholder.php', true );
 
@@ -27,9 +27,11 @@ function bgs_filter_movie_post_content( $content ) {
 	$movie_html = str_replace("GENRE_I18N", __("Genre", "bg-movies"), $movie_html);
 	$movie_html = str_replace("AUDIENCE_I18N", __("Audience", "bg-movies"), $movie_html);
 	$movie_html = str_replace("CERTIFICATE_I18N", __("Certificate", "bg-movies"), $movie_html);
-	$movie_html = str_replace("RATE_I18N", __("Rate", "bg-movies"), $movie_html);
+	$movie_html = str_replace("RATE_I18N", __("Leave your Rating", "bg-movies"), $movie_html);
+	$movie_html = str_replace("AVERAGE_I18N", __("Average Rating", "bg-movies"), $movie_html);
 
 	$movie_html = str_replace("MOVIE_ID", $post->ID, $movie_html);
+	$movie_html = str_replace("VIEWER_RATING", $movie_data['average_rating'], $movie_html);
 
 	return $movie_html . $content;
 }

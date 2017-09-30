@@ -8,7 +8,7 @@ function bgs_plugin_activated() {
 	global $wpdb;
 	$createSQL = "
 		CREATE TABLE `". $wpdb->prefix ."movie_ratings` (
-		  `id` bigint(20) NOT NULL,
+		  `id` bigint(20) NOT NULL AUTO_INCREMENT,
 		  `movie_id` bigint(20) NOT NULL,
 		  `viewer_rating` float NOT NULL,
 		  `user_ip` varchar(32) NOT NULL,

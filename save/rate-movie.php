@@ -26,6 +26,14 @@ function bgs_rate_movie() {
 			'%d', '%f', '%s'
 		)  // formats ( %s string, %d integer, %f float )
 	);
+
+	// Grab meta data
+	$movie_data	= get_post_meta( $movie_post_id, 'movie_data', true );
+	
+	$movie_data['average_rating']	= round($wpdb->get_var("SELECT AVG(`viewer_rating`) FROM `" . $wpdb->prefix . "movie_ratings` WHERE movie_id='". $movie_post_id ."'"), 1);
+	// Update meta data
+	update_post_meta( $movie_post_id, 'movie_data', $movie_data );
+
 	$response['status']		= 'pass'; // success status 
 	// echo $response['status'];
 	// die();

@@ -1,5 +1,5 @@
-<div id="recipeStatus"></div>
-<form action="" id="recipeForm">
+<div id="movieSubmitStatus"></div>
+<form id="movieSubmitForm">
 	<p class="form-group">
 		<label for="">Title</label>
 		<input type="text" class="form-control" id="bgs_inputTitle">

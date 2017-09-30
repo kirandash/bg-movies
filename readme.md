@@ -41,3 +41,5 @@ wp_enqueue_scripts, wp_enqueue_script
 ## Step 18 : Create shortcode with add_shortcode
 
 ## Step 19 : Replace textarea in shortcode with WordPress Content Editor
+
+## Step 20 : Submit the data from form and Sanitizing HTML Input with sanitize_text_field, wp_kses_post

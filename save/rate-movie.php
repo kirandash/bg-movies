@@ -34,6 +34,14 @@ function bgs_rate_movie() {
 	// Update meta data
 	update_post_meta( $movie_post_id, 'movie_data', $movie_data );
 
+	// https://codex.wordpress.org/Plugin_API
+	// https://developer.wordpress.org/reference/functions/do_action/
+	do_action( 'movie_rating', array(
+		'id'		=> $movie_post_id,
+		'rating'	=> $viewer_rating,
+		'ip'		=> $user_ip
+	)); // Now any one can use add_action fn to hook into this hook
+
 	$response['status']		= 'pass'; // success status 
 	// echo $response['status'];
 	// die();

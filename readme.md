@@ -30,4 +30,6 @@ wp_enqueue_scripts, wp_enqueue_script
 
 ## Step 13 : Changing the Custom Post Types Table Columns title and data 
 
-## Step 14 :  
+## Step 14 : Creating Suggested Movies widgets
+
+## Step 15 : Set CRON jobs 

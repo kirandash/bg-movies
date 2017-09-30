@@ -25,6 +25,7 @@ define( 'BGMOVIES_PLUGIN_URL', __FILE__ ); // define path of plugin folder inste
 * Includes for plugin
 *****************************/
 include( 'includes/activate.php' );
+include( 'includes/deactivate.php' );
 include( 'includes/init.php' );
 include( 'includes/admin/init.php' );
 include( 'save/save-post-movie.php' );
@@ -33,11 +34,14 @@ include( 'includes/frontend/enqueue.php' );
 include( 'save/rate-movie.php' );
 include( dirname(BGMOVIES_PLUGIN_URL) . '/includes/widgets.php' );
 include( dirname(BGMOVIES_PLUGIN_URL) . '/includes/widgets/movie-suggestion.php' );
+include( 'includes/cron-job.php' );
 
 /***************************** 
 * Hooks for plugin
 *****************************/
 register_activation_hook( __FILE__ , 'bgs_plugin_activated' ); 
+register_deactivation_hook( __FILE__ , 'bgs_plugin_deactivated' ); // Fn will be called when plugin is activated
+
 // register_activation_hook( $file, $function ); 
 // Fn will be called when plugin is activated
 add_action( 'init', 'bgs_movies_init' );
@@ -48,7 +52,7 @@ add_action( 'wp_enqueue_scripts', 'bgs_enqueue_frontend_scripts', 9999 ); // cha
 add_action( 'wp_ajax_bgs_rate_movie', 'bgs_rate_movie' ); // https://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action)
 add_action( 'wp_ajax_nopriv_bgs_rate_movie', 'bgs_rate_movie' ); // nopriv will accept request also from guest users and not just logged in users
 add_action( 'widgets_init', 'bgs_widgets_init' );
-
+add_action( 'bgs_suggested_movie_hook', 'bgs_random_suggested_movie' );
 /***************************** 
 * Shortcodes for plugin
 *****************************/

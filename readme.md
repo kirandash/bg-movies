@@ -25,3 +25,7 @@ wp_enqueue_scripts, wp_enqueue_script
 ## Step 10 : Ajax request for rating from front end using wp_localize_script
 
 ## Step 11 : Handle AJAX Requests and Insert Data into the Database
+
+## Step 12 : Averaging and Displaying the Rating
+
+## Step 13 : Changing the Custom Post Types Table Columns title and data 

@@ -6,7 +6,7 @@
 	</p>
 	<p class="form-group">
 		<label for="">Content</label>
-		<textarea class="form-control" id="moviecontenteditor"></textarea>
+		WYSIWYG_EDITOR
 	</p>
 	<p class="form-group">
 		<label for="">Director</label>

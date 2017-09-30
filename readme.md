@@ -39,3 +39,5 @@ wp_enqueue_scripts, wp_enqueue_script
 ## Step 17 : Showing random recipe on widget output.
 
 ## Step 18 : Create shortcode with add_shortcode
+
+## Step 19 : Replace textarea in shortcode with WordPress Content Editor

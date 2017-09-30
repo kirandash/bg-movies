@@ -32,4 +32,8 @@ wp_enqueue_scripts, wp_enqueue_script
 
 ## Step 14 : Creating Suggested Movies widgets
 
-## Step 15 : Set CRON jobs 
+## Step 15 : Set CRON jobs
+
+## Step 16 : Set transient
+
+## Step 17 : Showing random recipe on widget output.

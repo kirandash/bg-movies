@@ -35,6 +35,7 @@ include( 'save/rate-movie.php' );
 include( dirname(BGMOVIES_PLUGIN_URL) . '/includes/widgets.php' );
 include( dirname(BGMOVIES_PLUGIN_URL) . '/includes/widgets/movie-suggestion.php' );
 include( 'includes/cron-job.php' );
+include( 'includes/shortcodes/movie-submission.php' );
 
 /***************************** 
 * Hooks for plugin
@@ -53,6 +54,8 @@ add_action( 'wp_ajax_bgs_rate_movie', 'bgs_rate_movie' ); // https://codex.wordp
 add_action( 'wp_ajax_nopriv_bgs_rate_movie', 'bgs_rate_movie' ); // nopriv will accept request also from guest users and not just logged in users
 add_action( 'widgets_init', 'bgs_widgets_init' );
 add_action( 'bgs_suggested_movie_hook', 'bgs_random_suggested_movie' );
+
 /***************************** 
 * Shortcodes for plugin
 *****************************/
+add_shortcode( 'movie_submission', 'bgs_movie_submission_shortcode' );

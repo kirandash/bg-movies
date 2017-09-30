@@ -37,3 +37,5 @@ wp_enqueue_scripts, wp_enqueue_script
 ## Step 16 : Set transient
 
 ## Step 17 : Showing random recipe on widget output.
+
+## Step 18 : Create shortcode with add_shortcode

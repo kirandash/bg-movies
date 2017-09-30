@@ -29,3 +29,5 @@ wp_enqueue_scripts, wp_enqueue_script
 ## Step 12 : Averaging and Displaying the Rating
 
 ## Step 13 : Changing the Custom Post Types Table Columns title and data 
+
+## Step 14 :  

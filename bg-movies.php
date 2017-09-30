@@ -31,6 +31,8 @@ include( 'save/save-post-movie.php' );
 include( 'save/filter-postcontent.php' );
 include( 'includes/frontend/enqueue.php' );
 include( 'save/rate-movie.php' );
+include( dirname(BGMOVIES_PLUGIN_URL) . '/includes/widgets.php' );
+include( dirname(BGMOVIES_PLUGIN_URL) . '/includes/widgets/movie-suggestion.php' );
 
 /***************************** 
 * Hooks for plugin
@@ -45,6 +47,7 @@ add_filter( 'the_content', 'bgs_filter_movie_post_content' );
 add_action( 'wp_enqueue_scripts', 'bgs_enqueue_frontend_scripts', 9999 ); // change the priority from default value of 10 to 9999 to make sure that first theme loads and then plugin files
 add_action( 'wp_ajax_bgs_rate_movie', 'bgs_rate_movie' ); // https://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action)
 add_action( 'wp_ajax_nopriv_bgs_rate_movie', 'bgs_rate_movie' ); // nopriv will accept request also from guest users and not just logged in users
+add_action( 'widgets_init', 'bgs_widgets_init' );
 
 /***************************** 
 * Shortcodes for plugin
